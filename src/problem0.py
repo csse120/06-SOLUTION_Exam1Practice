@@ -233,15 +233,17 @@ def problem0b(n):
            since there is one prime (namely, 2) between 2 and 2.
       -- If n is 200, the correct answer is 46,
            since there are 46 primes between 2 and 200.
-     """  #
-    # ------------------------------------------------------------------  #
-    # TODO: 4. Implement and test this function.  #          Tests have been
-    # written for you (above).  #
-    # ####################################################################  #
-    #  IMPORTANT:  #    **  For full credit you must appropriately  #    **
-    # use (call) the   is_prime   function that is DEFINED ABOVE.
-    # ####################################################################  #
-    #  ------------------------------------------------------------------
+    """
+    # ------------------------------------------------------------------
+    # TODO: 4. Implement and test this function.
+    #          Tests have been written for you (above).
+    #
+    ####################################################################
+    # IMPORTANT:
+    #    **  For full credit you must appropriately
+    #    **  use (call) the   is_prime   function that is DEFINED ABOVE.
+    ####################################################################
+    # ------------------------------------------------------------------
     count = 0
 
     for k in range(n - 1):
@@ -306,14 +308,16 @@ def problem0c(circle, n, window):
       :type circle: rg.Circle
       :type n: int
       :type window: rg.RoseWindow
-    """  # ------------------------------------------------------------------
-    #  TODO: 5. Implement and test this function.  #          Tests have been
-    #  written for you (above).  #
-    # ####################################################################  #
-    #  HINT:   render(0.5)  #   renders with a half-second pause after
-    # rendering.
-    # ####################################################################  #
-    #  ------------------------------------------------------------------
+    """
+    # ------------------------------------------------------------------
+    # TODO: 5. Implement and test this function.
+    #          Tests have been written for you (above).
+    #
+    ####################################################################
+    # HINT:   render(0.5)
+    #   renders with a half-second pause after rendering.
+    ####################################################################
+    # ------------------------------------------------------------------
     radius = circle.radius
     x = circle.center.x + (2 * radius)
     y = circle.center.y
