@@ -1,0 +1,34 @@
+
+STATUS of these FIXMEs:
+  — Problem 2a become problem 2, as recommended.
+  — Problem 2 (the original one) needs a home, as recommended below.
+  — I don’t know whether problem 2 (the original one) has had the fixes recommended below.
+  — The paper and pencil problems have been updated, but they still need another look.
+
+FIXMEs:
+The problem2a picture needs to become a simple video,
+like the problem2b_SampleRuns, since problem 2a has animation.
+
+problem2b_SampleRuns is good but has small details
+that are no longer accurate.
+
+The paper and pencil problems removed questions on:
+  -- 2 and 3 argument range expressions
+  -- input/output
+Make sure those get BACK into Test 2 practice.
+
+The last problem on the paper and pencil problems (on vocabulary about objects) remains troubling, in that:
+  -- we know an object when we see one (?), but I am unsure that question is accurate.
+  -- We need to distinguish  math.sin(...)   from circle.attach_to(...), but I am unsure that the words METHOD and FUNCTION accomplish that.  I think most people would say that a method is a particular kind of function.
+  -- Likewise, variable and object -- not sure we are doing that right.
+  
+More generally, the paper and pencil problems need an update throughout.
+
+ Problem 2 alt needs to get folded in (we did not use it this term)
+ and the problems re-numbered throughout.  I think that the right
+ approach may be:
+   1. Do problem0 in Live Coding (15 minutes) and leave it numbered 0.
+   2. Problem2_alt becomes problem2.
+   3. Problem2 either goes away or (better?) gets done earlier
+      in the term (so that get_mouse has been done).
+   4. Problem3 stays as is, but with test cases given for part A.
