@@ -1,11 +1,9 @@
 """
-PRACTICE Test 1, problem 1.
+PRACTICE Exam 1, problem 1.
 
-Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and SOLUTION by David Mutchler.  September 2016.
-"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
-
-import math
+Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
+         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
+"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -27,13 +25,27 @@ import math
 #    on it, in class or via Piazza.
 ########################################################################
 
+import testing_helper
+import time
+import math
+
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    test_problem1a()
-    test_problem1b()
-    test_problem1c()
+    run_test_problem1a()
+    run_test_problem1b()
+    run_test_problem1c()
 
+
+########################################################################
+# TODO: 2.  READ the green doc-string for the:
+#   - is_prime
+#   - sum_of_digits
+# functions defined below.  You do NOT need to understand their
+# implementations, just their specification (per the doc-string).
+# You should  ** CALL **  those functions as needed in implementing the
+# other functions.  After you have READ this, change its _TODO_ to DONE.
+########################################################################
 
 def is_prime(n):
     """
@@ -55,7 +67,7 @@ def is_prime(n):
     return True
     # ------------------------------------------------------------------
     # Students:
-    #   Do NOT touch the above  is_prime  function - it has no TODO.
+    #   Do NOT touch the above  is_prime  function - it has no TO DO.
     #   Do NOT copy code from this function.
     #
     # Instead, ** CALL ** this function as needed in the problems below.
@@ -73,7 +85,7 @@ def sum_of_digits(number):
     """
     # ------------------------------------------------------------------
     # Students:
-    #   Do NOT touch the above  sum_of_digits function - it has no TODO.
+    #   Do NOT touch the above  sum_of_digits function - it has no TO DO.
     #   Do NOT copy code from this function.
     #
     # Instead, ** CALL ** this function as needed in the problems below.
@@ -91,10 +103,10 @@ def sum_of_digits(number):
     return digit_sum
 
 
-def test_problem1a():
+def run_test_problem1a():
     """ Tests the   problem1a   function. """
     # ------------------------------------------------------------------
-    # DONE: 2. Implement this TEST function.
+    # TODO: 3. Implement this TEST function.
     #   It TESTS the  problem1a  function defined below.
     #   Include at least **   4   ** tests (we wrote two for you).
     # ------------------------------------------------------------------
@@ -108,38 +120,45 @@ def test_problem1a():
     print('Testing the   problem1a   function:')
     print('--------------------------------------------------')
 
+    format_string = '    problem1a( {} )'
+    test_results = [0, 0]  # Number of tests passed, failed.
+
     # Test 1:
     expected = -1.601  # This is APPROXIMATELY the correct answer.
-    answer = problem1a(3, 5)
-    print()
-    print('Test 1 expected:', expected, '(approximately)')
-    print('       actual:  ', answer)
+    print_expected_result_of_test([3, 5], expected, test_results, format_string)
+    actual = problem1a(3, 5)
+    print_actual_result_of_test(expected, actual, test_results)
 
     # Test 2:
     expected = 1.278  # This is APPROXIMATELY the correct answer.
-    answer = problem1a(30, 100)
-    print()
-    print('Test 2 expected:', expected, '(approximately)')
-    print('       actual:  ', answer)
+    print_expected_result_of_test([30, 100], expected, test_results,
+                                  format_string)
+    actual = problem1a(30, 100)
+    print_actual_result_of_test(expected, actual, test_results)
 
     # ------------------------------------------------------------------
-    # DONE: 2 (continued).
+    # TO DO: 2 (continued).
     # Below this comment, add 2 more test cases of your own choosing.
-    # ------------------------------------------------------------------
+    # You do NOT need to use the above form.  Instead, use the usual:
+    #   expected = XXX
+    #   actual = problem1a(YYY, YYY)
+    #   print('Test 1 expected:', expected)
+    #   print('       actual:  ', actual)
+    #  ------------------------------------------------------------------
 
     # Test 3:
     expected = 1.135  # This is APPROXIMATELY the correct answer.
-    answer = problem1a(1, -2)
+    actual = problem1a(1, -2)
     print()
     print('Test 3 expected:', expected, '(approximately)')
-    print('       actual:  ', answer)
+    print('       actual:  ', actual)
 
     # Test 4:
     expected = 0.0
-    answer = problem1a(0, 0)
+    actual = problem1a(0, 0)
     print()
     print('Test 4 expected:', expected, '(approximately)')
-    print('       actual:  ', answer)
+    print('       actual:  ', actual)
 
 
 def problem1a(m, n):
@@ -160,7 +179,7 @@ def problem1a(m, n):
       -- If m is 30 and n is 100, the correct answer is about 1.278.
     """
     # ------------------------------------------------------------------
-    # DONE: 3. Implement and test this function.
+    # TODO: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -175,13 +194,17 @@ def problem1a(m, n):
     return total
 
 
-def test_problem1b():
+def run_test_problem1b():
     """ Tests the   problem1b   function. """
     # ------------------------------------------------------------------
-    # DONE: 4. Implement this TEST function.
+    # TODO: 5. Implement this TEST function.
     #   It TESTS the  problem1b  function defined below.
-    #   Include at least **   4   ** tests.
-    # ------------------------------------------------------------------
+    #   Include at least **   4   ** tests.  Use the usual form:
+    #
+    #   expected = XXX
+    #   actual = problem1b(YYY, YYY)
+    #   print('Test 1 expected:', expected)
+    #   print('       actual:  ', actual)
     # ------------------------------------------------------------------
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      3
@@ -251,7 +274,7 @@ def problem1b(m, f):
            since there are 44 primes between 5 and 200.
      """
     # ------------------------------------------------------------------
-    # DONE: 5. Implement and test this function.
+    # TODO: 6. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     ####################################################################
@@ -275,61 +298,58 @@ def problem1b(m, f):
     # OK for this test, but help them see that the above is better.
 
 
-def test_problem1c():
+def run_test_problem1c():
     """ Tests the   problem1c   function. """
     print()
     print('--------------------------------------------------')
     print('Testing the   problem1c   function:')
     print('--------------------------------------------------')
 
+    format_string = '    problem1c( {} )'
+    test_results = [0, 0]  # Number of tests passed, failed.
+
     # Test 1:
     expected = 3
-    answer = problem1c(10)
-    print()
-    print('Test 1 expected:', expected)
-    print('       actual:  ', answer)
+    print_expected_result_of_test([10], expected, test_results, format_string)
+    actual = problem1c(10)
+    print_actual_result_of_test(expected, actual, test_results)
 
     # Test 2:
     expected = 6
-    answer = problem1c(11)
-    print()
-    print('Test 2 expected:', expected)
-    print('       actual:  ', answer)
+    print_expected_result_of_test([11], expected, test_results, format_string)
+    actual = problem1c(11)
+    print_actual_result_of_test(expected, actual, test_results)
+
 
     # Test 3:
     expected = 33
-    answer = problem1c(25)
-    print()
-    print('Test 3 expected:', expected)
-    print('       actual:  ', answer)
+    print_expected_result_of_test([25], expected, test_results, format_string)
+    actual = problem1c(25)
+    print_actual_result_of_test(expected, actual, test_results)
 
     # Test 4:
     expected = 2
-    answer = problem1c(2)
-    print()
-    print('Test 4 expected:', expected)
-    print('       actual:  ', answer)
+    print_expected_result_of_test([2], expected, test_results, format_string)
+    actual = problem1c(2)
+    print_actual_result_of_test(expected, actual, test_results)
 
     # Test 5:
     expected = 6
-    answer = problem1c(3)
-    print()
-    print('Test 5 expected:', expected)
-    print('       actual:  ', answer)
+    print_expected_result_of_test([3], expected, test_results, format_string)
+    actual = problem1c(3)
+    print_actual_result_of_test(expected, actual, test_results)
 
     # Test 6:
     expected = 19416
-    answer = problem1c(10007)
-    print()
-    print('Test 6 expected:', expected)
-    print('       actual:  ', answer)
+    print_expected_result_of_test([10007], expected, test_results, format_string)
+    actual = problem1c(10007)
+    print_actual_result_of_test(expected, actual, test_results)
 
     # Test 7:
     expected = 19416
-    answer = problem1c(10008)
-    print()
-    print('Test 7 expected:', expected)
-    print('       actual:  ', answer)
+    print_expected_result_of_test([10008], expected, test_results, format_string)
+    actual = problem1c(10008)
+    print_actual_result_of_test(expected, actual, test_results)
 
 
 def problem1c(n):
@@ -357,7 +377,7 @@ def problem1c(n):
            and the sum of the digits in 223092870 is 33.
     """
     # ------------------------------------------------------------------
-    # DONE: 6. Implement and test this function.
+    # TODO: 7. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
@@ -381,7 +401,51 @@ def problem1c(n):
     # Students might prefer  is_prime(k + 2) == True   in the above.
     # OK for this test, but help them see that the above is better.
 
-# ----------------------------------------------------------------------
+
+###############################################################################
+# Our tests use the following to print error messages in red.
+# Do NOT change it.  You do NOT have to do anything with it.
+###############################################################################
+
+def print_expected_result_of_test(arguments, expected,
+                                  test_results, format_string):
+    testing_helper.print_expected_result_of_test(arguments, expected,
+                                                 test_results,
+                                                 format_string)
+
+
+def print_actual_result_of_test(expected, actual, test_results):
+    testing_helper.print_actual_result_of_test(expected, actual,
+                                               test_results)
+
+
+def print_summary_of_test_results(test_results):
+    testing_helper.print_summary_of_test_results(test_results)
+
+
+# To allow color-coding the output to the console:
+USE_COLORING = True  # Change to False to revert to OLD style coloring
+
+testing_helper.USE_COLORING = USE_COLORING
+if USE_COLORING:
+    # noinspection PyShadowingBuiltins
+    print = testing_helper.print_colored
+else:
+    # noinspection PyShadowingBuiltins
+    print = testing_helper.print_uncolored
+
+
+# -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
-# ----------------------------------------------------------------------
-main()
+# The   try .. except   prevents error messages on the console from being
+# intermingled with ordinary output to the console.
+# -----------------------------------------------------------------------------
+try:
+    main()
+except Exception:
+    print('ERROR - While running this test,', color='red')
+    print('your code raised the following exception:', color='red')
+    print()
+    time.sleep(1)
+    raise
+
