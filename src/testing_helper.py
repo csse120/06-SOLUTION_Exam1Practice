@@ -19,6 +19,8 @@
 import sys
 import time
 
+PRECISION = 3  # Round floats to 3 decimal places when comparing vs expected
+
 # Set  USE_COLORING  to False to use the "old" way of printing:
 USE_COLORING = True
 
@@ -53,6 +55,8 @@ def print_actual_result_of_test(expected, actual, test_results):
         print_it = print_uncolored
 
     try:
+        if type(actual) is float:
+            actual = round(actual, PRECISION)
         if expected == actual:
             print_it("  PASSED the above test -- good!", color='blue')
             test_results[0] = test_results[0] + 1
