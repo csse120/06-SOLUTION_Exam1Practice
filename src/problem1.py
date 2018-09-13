@@ -120,7 +120,7 @@ def run_test_problem1a():
     print('Testing the   problem1a   function:')
     print('--------------------------------------------------')
 
-    format_string = '    problem1a( {} )'
+    format_string = '    problem1a( {}, {} )'
     test_results = [0, 0]  # Number of tests passed, failed.
 
     # Test 1:
