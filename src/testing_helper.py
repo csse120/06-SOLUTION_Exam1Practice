@@ -68,7 +68,7 @@ def print_actual_result_of_test(expected, actual, test_results, precision=None):
         else:
             print_it("  *** FAILED the above test. ***", color='red')
     except Exception:
-        print_it("_it  *** FAILED the above test. ***", color='red')
+        print_it("  *** FAILED the above test. ***", color='red')
     test_results[1] = test_results[1] + 1
 
 
