@@ -46,7 +46,7 @@ def print_expected_result_of_test(arguments, expected, test_results,
     print("  Expected:", expected)
 
 
-def print_actual_result_of_test(expected, actual, test_results):
+def print_actual_result_of_test(expected, actual, test_results, precision=None):
     print("  Actual:  ", actual)
 
     if USE_COLORING:
@@ -55,7 +55,11 @@ def print_actual_result_of_test(expected, actual, test_results):
         print_it = print_uncolored
 
     try:
-        if type(actual) is float:
+        if precision is not None:
+            expected = round(expected, precision)
+            actual = round(actual, precision)
+        elif type(actual) is float:
+            expected = round(expected, PRECISION)
             actual = round(actual, PRECISION)
         if expected == actual:
             print_it("  PASSED the above test -- good!", color='blue')
@@ -64,7 +68,7 @@ def print_actual_result_of_test(expected, actual, test_results):
         else:
             print_it("  *** FAILED the above test. ***", color='red')
     except Exception:
-        print_it("_it  *** FAILED the above test. ***", color='red')
+        print_it("  *** FAILED the above test. ***", color='red')
     test_results[1] = test_results[1] + 1
 
 

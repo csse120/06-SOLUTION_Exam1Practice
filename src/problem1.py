@@ -120,21 +120,21 @@ def run_test_problem1a():
     print('Testing the   problem1a   function:')
     print('--------------------------------------------------')
 
-    format_string = '    problem1a( {} )'
+    format_string = '    problem1a( {}, {} )'
     test_results = [0, 0]  # Number of tests passed, failed.
 
     # Test 1:
     expected = -1.601  # This is APPROXIMATELY the correct answer.
     print_expected_result_of_test([3, 5], expected, test_results, format_string)
     actual = problem1a(3, 5)
-    print_actual_result_of_test(expected, actual, test_results)
+    print_actual_result_of_test(expected, actual, test_results, precision=3)
 
     # Test 2:
     expected = 1.278  # This is APPROXIMATELY the correct answer.
     print_expected_result_of_test([30, 100], expected, test_results,
                                   format_string)
     actual = problem1a(30, 100)
-    print_actual_result_of_test(expected, actual, test_results)
+    print_actual_result_of_test(expected, actual, test_results, precision=3)
 
     print_summary_of_test_results(test_results)
 
@@ -419,7 +419,7 @@ def print_expected_result_of_test(arguments, expected,
                                                  format_string)
 
 
-def print_actual_result_of_test(expected, actual, test_results):
+def print_actual_result_of_test(expected, actual, test_results, precision=None):
     testing_helper.print_actual_result_of_test(expected, actual,
                                                test_results)
 
