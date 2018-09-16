@@ -140,6 +140,35 @@ def run_test_problem0a():
     actual = problem0a(730931)
     print_actual_result_of_test(expected, actual, test_results)
 
+    # Test 6:
+    expected = False
+    print_expected_result_of_test([200], expected, test_results, format_string)
+    actual = problem0a(200)
+    print_actual_result_of_test(expected, actual, test_results)
+
+    # Test 7:
+    expected = True
+    print_expected_result_of_test([562], expected, test_results,
+                                  format_string)
+    actual = problem0a(562)
+    print_actual_result_of_test(expected, actual, test_results)
+
+    # Test 8:
+    expected = True
+    print_expected_result_of_test([555], expected, test_results,
+                                  format_string)
+    actual = problem0a(555)
+    print_actual_result_of_test(expected, actual, test_results)
+
+    # Test 9:
+    expected = False
+    print_expected_result_of_test([13], expected, test_results,
+                                  format_string)
+    actual = problem0a(13)
+    print_actual_result_of_test(expected, actual, test_results)
+
+    print_summary_of_test_results(test_results)
+
 
 def problem0a(n):
     """
@@ -216,6 +245,8 @@ def run_test_problem0b():
     print_expected_result_of_test([997], expected, test_results, format_string)
     actual = problem0b(997)
     print_actual_result_of_test(expected, actual, test_results)
+
+    print_summary_of_test_results(test_results)
 
 
 def problem0b(n):
